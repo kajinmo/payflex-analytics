@@ -14,19 +14,33 @@ def configure_plot_style():
     
     # Esquema de cores personalizado
     global my_colors
-    my_colors = ['#002768', '#1F6FF0', '#0eafaa', '#B5B0AE']
+    my_colors = ['#008E5A', '#00A868', '#0FCC7D', '#B5B0AE', '#D0D0D0', '#EFF4F8']
     sns.set_palette(my_colors)
 
 
 
 class PlotUtils:
     """Classe utilitária para criação de gráficos"""
+
+    @staticmethod
+    def _save_plot(filename=None, dpi=300, transparent=False):
+        """
+        Salva o gráfico atual em arquivo, se filename for fornecido
+        """
+        if filename:
+            plt.savefig(
+                filename,
+                dpi=dpi,
+                transparent=transparent,
+                bbox_inches='tight',
+                pad_inches=0.3)
     
     
     @staticmethod
     def pie_chart(data, x=None, y=None, title=None, explode=None, colors=None, 
                  autopct_format='both', startangle=90, textprops=None, title_fontsize=12,
-                 value_fontsize=12, figsize=(6, 4), locale_format=True):
+                 value_fontsize=12, figsize=(6, 4), locale_format=True, save_to=None, 
+                 dpi=300, transparent=False):
         """
         Cria um gráfico de pizza
         
@@ -92,13 +106,14 @@ class PlotUtils:
             ax.set_title(title, pad=20, fontsize=title_fontsize)
         
         plt.tight_layout()
+        PlotUtils._save_plot(save_to, dpi, transparent)
         plt.show()
     
 
 
     
     @staticmethod
-    def box_plot(data, x, y, title, xlabel=None, ylabel=None, rotation=0):
+    def box_plot(data, x, y, title, xlabel=None, ylabel=None, rotation=0, save_to=None, dpi=300, transparent=False):
         """
         Cria um boxplot
 
@@ -112,6 +127,7 @@ class PlotUtils:
             plt.ylabel(ylabel)
         plt.xticks(rotation=rotation)
 
+        PlotUtils._save_plot(save_to, dpi, transparent)
         plt.show()
 
 
@@ -119,7 +135,8 @@ class PlotUtils:
 
     @staticmethod
     def bar_plot(data, x, y=None, title=None, xlabel=None, ylabel=None, 
-                 rotation=45, order=None, color_index=2, figsize=(6, 4)):
+                 rotation=45, order=None, color_index=2, figsize=(6, 4),
+                 save_to=None, dpi=300, transparent=False):
         """
         Cria um gráfico de barras verticais ordenado
         
@@ -136,6 +153,7 @@ class PlotUtils:
         plt.ylabel(ylabel if ylabel else 'Contagem' if not y else y)
         plt.xticks(rotation=rotation)
         plt.tight_layout()
+        PlotUtils._save_plot(save_to, dpi, transparent)
         plt.show()
     
     
@@ -143,7 +161,8 @@ class PlotUtils:
     
     @staticmethod
     def hist_plot(data, x, title=None, xlabel=None, ylabel='Contagem', 
-                  bins='auto', color_index=0, shrink=0.8, rotation=0, color='#002768'):
+                  bins='auto', color_index=0, shrink=0.8, rotation=0, color='#002768',
+                  save_to=None, dpi=300, transparent=False):
         """
         Cria um histograma
         
@@ -155,6 +174,7 @@ class PlotUtils:
         plt.ylabel(ylabel)
         plt.xticks(rotation=rotation)
         plt.tight_layout()
+        PlotUtils._save_plot(save_to, dpi, transparent)
         plt.show()
     
     
@@ -163,13 +183,15 @@ class PlotUtils:
     @staticmethod
     def line_plot(data, x, y, title=None, xlabel=None, ylabel=None, 
                   color_index=0, marker='o', linewidth=2.5, grid=True,
-                  sort_by_y=False, rotation=0, fontsize=10):
+                  sort_by_y=False, rotation=0, fontsize=10, save_to=None,
+                  dpi=300, transparent=False):
         """
         Cria um gráfico de linhas
 
         """
         # Ordena os dados se necessário
-        data = data.sort_values(by=y, ascending=False) if sort_by_y else data
+        if sort_by_y:
+            data = data.sort_values(by=y, ascending=False).copy()  # `.copy()` evita warnings
 
         sns.lineplot(data=data, x=x, y=y, marker=marker, 
                     color=my_colors[color_index], linewidth=linewidth)
@@ -183,6 +205,7 @@ class PlotUtils:
             plt.grid(axis='y', linestyle='--', alpha=0.3)
         
         plt.tight_layout()
+        PlotUtils._save_plot(save_to, dpi, transparent)
         plt.show()
     
     
@@ -191,7 +214,7 @@ class PlotUtils:
     @staticmethod
     def point_plot(data, x, y, title=None, xlabel=None, ylabel=None, 
                 color_index=0, marker='o', linewidth=2.5, grid=True,
-                sort_by_y=False, rotation=0):
+                sort_by_y=False, rotation=0, save_to=None, dpi=300, transparent=False):
         """
         Cria um gráfico de pontos
         """
@@ -211,4 +234,5 @@ class PlotUtils:
             plt.grid(axis='y', linestyle='--', alpha=0.3)
         
         plt.tight_layout()
+        PlotUtils._save_plot(save_to, dpi, transparent)
         plt.show()
