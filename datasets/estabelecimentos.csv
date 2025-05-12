@@ -1,0 +1,51 @@
+id_estabelecimento,nome_fantasia,categoria,cidade,estado
+estab_0,da Cunha Santos Ltda.,vestuário,Vargas,TO
+estab_1,Pacheco Costela S/A,eletrodomésticos,das Neves de Lopes,MA
+estab_2,Silva,farmácia,Brito,RO
+estab_3,Fogaça,eletrodomésticos,Azevedo do Norte,RO
+estab_4,das Neves,eletrodomésticos,Sampaio,RO
+estab_5,Carvalho S.A.,mercado,Alves,AP
+estab_6,Duarte,farmácia,Alves,AL
+estab_7,Rocha - EI,farmácia,Costa,RN
+estab_8,Dias - ME,farmácia,da Rocha do Amparo,PB
+estab_9,Machado,eletrodomésticos,da Costa,PA
+estab_10,da Luz,vestuário,Teixeira,TO
+estab_11,Cirino Cirino e Filhos,farmácia,Câmara do Campo,BA
+estab_12,da Rosa,eletrodomésticos,das Neves,MS
+estab_13,da Paz,mercado,Marques de Cirino,AP
+estab_14,Moreira,vestuário,Aparecida,AL
+estab_15,Montenegro,mercado,Ribeiro dos Dourados,PA
+estab_16,Sales - EI,vestuário,Mendonça das Pedras,SE
+estab_17,Rezende - ME,eletrodomésticos,Silveira de Cavalcanti,DF
+estab_18,Rodrigues Guerra e Filhos,restaurante,Lopes,PB
+estab_19,Novais Leão S.A.,vestuário,Porto da Serra,AM
+estab_20,Lima da Cunha S/A,mercado,da Cruz,RS
+estab_21,da Mata,eletrodomésticos,Carvalho de Souza,SE
+estab_22,Macedo da Cunha - EI,vestuário,Moraes,RR
+estab_23,Souza,restaurante,da Cruz,AM
+estab_24,da Cruz Mendes - ME,restaurante,Porto de da Cunha,TO
+estab_25,Cirino Duarte Ltda.,farmácia,Costela de Araújo,RS
+estab_26,Oliveira,farmácia,Vasconcelos do Campo,AP
+estab_27,Fogaça Mendonça S.A.,mercado,Carvalho do Norte,DF
+estab_28,Lopes da Luz e Filhos,vestuário,Pacheco,AL
+estab_29,Pastor,vestuário,Melo de Gomes,PB
+estab_30,Araújo - EI,farmácia,Dias de Gonçalves,MG
+estab_31,Ferreira Ltda.,vestuário,Fogaça,PA
+estab_32,Monteiro Novais - EI,vestuário,Rios,BA
+estab_33,Barros,restaurante,Rocha,GO
+estab_34,Cavalcante,farmácia,Azevedo,MS
+estab_35,Rodrigues,eletrodomésticos,Cavalcanti de Cunha,TO
+estab_36,Fernandes,farmácia,Pires de Sampaio,BA
+estab_37,Aparecida,eletrodomésticos,Andrade de Pires,PB
+estab_38,Oliveira,restaurante,Cunha,RJ
+estab_39,Nunes - EI,mercado,Garcia,RJ
+estab_40,Vieira,vestuário,Moraes das Pedras,PE
+estab_41,Nascimento - ME,restaurante,Dias,SP
+estab_42,Vieira,vestuário,Araújo do Sul,BA
+estab_43,Silva S/A,mercado,Cavalcanti dos Dourados,MS
+estab_44,Casa Grande Garcia - ME,mercado,Cavalcante,MA
+estab_45,da Luz,restaurante,Vieira das Flores,PA
+estab_46,Caldeira,mercado,Pimenta dos Dourados,BA
+estab_47,Pinto,eletrodomésticos,Alves,TO
+estab_48,Santos,mercado,Sousa,AP
+estab_49,Barbosa,vestuário,Ferreira da Serra,GO
